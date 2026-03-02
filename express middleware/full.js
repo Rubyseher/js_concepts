@@ -18,7 +18,7 @@ app.get('/orders/:id', async (req,res,next)=>{
 app.use((err,req,res,next)=>{
     const statusCode = err. status||500;
 
-    res.status(statusCode).json({"somethign went wrong"})
+    res.status(statusCode).json({error:"somethign went wrong"})
 })
 
 app.listen(3000)
